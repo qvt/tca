@@ -1,0 +1,91 @@
+module edu.kit.ipd.sdq.mdsd.qvto2mdg.Qvto2Mdg
+
+//import org.eclipse.qvtd.xtext.qvtrelation.*
+import org.eclipse.ocl.examples.xtext.oclinecore.*
+import org.eclipse.emf.mwe.utils.*
+import org.eclipse.xtext.ecore.*
+
+var targetDir = "src-gen"
+var modelPath = "model"
+//var qvtoScript = "platform:/resource/EventsPCM2ClassicPCM/transformations/EventsPCM2ClassicPCM.qvto"
+var qvtoScript = "platform:/resource/CompositeActivity2Process.qvto/transforms/Activity2ProcessModule.qvto"
+
+Workflow {
+
+    bean = StandaloneSetup {
+    	platformUri = ".."
+    	uriMap = Mapping {
+    		from = "http://sdq.ipd.uka.de/PalladioComponentModel/5.0"
+    		to = "platform:/resource/EventsPCM2ClassicPCM/metamodels/pcm.ecore"
+    	}
+    	uriMap = Mapping {
+    		from = "http://sdq.ipd.uka.de/PalladioComponentModel/Allocation/5.0"
+    		to = "platform:/resource/EventsPCM2ClassicPCM/metamodels/pcm.ecore#//allocation"
+    	}
+    	uriMap = Mapping {
+    		from = "http://sdq.ipd.uka.de/PalladioComponentModel/System/5.0"
+    		to = "platform:/resource/EventsPCM2ClassicPCM/metamodels/pcm.ecore#//system"
+    	}
+    	uriMap = Mapping {
+    		from = "http://sdq.ipd.uka.de/PalladioComponentModel/Repository/5.0"
+    		to = "platform:/resource/EventsPCM2ClassicPCM/metamodels/pcm.ecore#//repository"
+    	}
+    	uriMap = Mapping {
+    		from = "http://sdq.ipd.uka.de/FeatureConfig/2.0"
+    		to = "platform:/resource/EventsPCM2ClassicPCM/metamodels/featureconfig.ecore"
+    	}
+    	uriMap = Mapping {
+    		from = "http://sdq.ipd.uka.de/FeatureModel/2.0"
+    		to = "platform:/resource/EventsPCM2ClassicPCM/metamodels/featuremodel.ecore"
+    	}
+    	uriMap = Mapping {
+    		from = "http://sdq.ipd.uka.de/StochasticExpressions/1.0"
+    		to = "platform:/resource/EventsPCM2ClassicPCM/metamodels/stoex.ecore"
+    	}
+    	uriMap = Mapping {
+    		from = "http://www.kit.edu/ipd/sdq/Activity/Core/1.0"
+    		to = "platform:/resource/CompositeActivity2Process.qvto/metamodels/Activity.ecore#//core"
+    	}
+    	uriMap = Mapping {
+    		from = "http://www.kit.edu/ipd/sdq/Activity/Composite/1.0"
+    		to = "platform:/resource/CompositeActivity2Process.qvto/metamodels/Activity.ecore#//composite"
+    	}
+    	uriMap = Mapping {
+    		from = "http://www.kit.edu/ipd/sdq/Process/1.0"
+    		to = "platform:/resource/CompositeActivity2Process.qvto/metamodels/Process.ecore"
+    	}
+        scanClassPath = true
+    }
+
+	component = DirectoryCleaner {
+		directory = targetDir
+	}
+
+	component = QvtoReader {
+		// load script into model slot 
+		uri = qvtoScript
+		modelSlot = "model"
+	}
+
+//	// Unfortunately, dumping only works if slot contains EObject, but Generator below expects EResource.
+//	// Also, only the main module is dumped, and not any imported module. 
+//	component = Writer {
+//		modelSlot = "model"
+//		uri = "${targetDir}/Dump.xmi"
+////		multipleResourcesInCaseOfList = true
+////		ignoreEmptySlot = true
+//		skipOnErrors = true
+//		useSingleGlobalResourceSet = true
+//	}
+
+	// NB: XMLEncodingError is thrown, yet the output is correct
+	//     see https://bugs.eclipse.org/bugs/show_bug.cgi?id=409069
+	component = Qvto2MdgGeneratorSupport { }
+	component = org.eclipse.xtext.generator.GeneratorComponent {
+		register = Qvto2MdgGeneratorSetup {}
+		slot = "model"
+		outlet = {
+			path = targetDir
+		}
+	}
+}

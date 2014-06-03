@@ -1,0 +1,261 @@
+# Case Study
+
+Bunch is configured as follows (cf. http://plg.uwaterloo.ca/~holt/papers/icsm05-wu.pdf):
+*	Hill Climbing			HC_
+	*	Population Size		P-
+*	Minimum Search Space	S-
+	*	Randomization		R-
+	*	Simulated Annealing	OFF/ON (with default parameters)
+*	Output
+	*	All levels, no tree structure
+	
+* NB:
+	* With fewer modules, recall is higher, although precision is lower (?)
+
+Weights #1
+*	final val MODULE_WEIGHT = 0;		// Not required for MDG file since Bunch must deduce this 
+	final val WRITE_WEIGHT = 5/*0*/;	// Use higher values for target-driven decomposition
+	final val READ_WEIGHT = 15;			// Use higher values for source-driven decomposition
+	final val CALL_WEIGHT = 20;			// Should be sufficiently high to regard call structure
+	final val PACKAGE_WEIGHT = 10/*0*/;	// Only use if package structure should be respected
+	final val REFERENCE_WEIGHT = 0;		// Consider references between classes (and thus across packages)
+	final val CONTAINMENT_WEIGHT = 5;	// Consider containment references between classes
+	final val INHERITANCE_WEIGHT = 5;	// Inheritance is another form of reference
+*	if (w < weight)						// non-cumulative, just take the maximum value
+		matrix.put(from, to, weight)
+
+Weights #2
+*	final val MODULE_WEIGHT = 0;		// Not required for MDG file since Bunch must deduce this 
+	final val WRITE_WEIGHT = 30/*0*/;	// Use higher values for target-driven decomposition
+	final val READ_WEIGHT = 15;			// Use higher values for source-driven decomposition
+	final val CALL_WEIGHT = 30;			// Should be sufficiently high to regard call structure
+	final val PACKAGE_WEIGHT = 15/*0*/;	// Only use if package structure should be respected
+	final val REFERENCE_WEIGHT = 0;		// Consider references between classes (and thus across packages)
+	final val CONTAINMENT_WEIGHT = 5;	// Consider containment references between classes
+	final val INHERITANCE_WEIGHT = 5;	// Inheritance is another form of reference
+*	if (w < weight)						// non-cumulative, just take the maximum value
+		matrix.put(from, to, weight)
+
+Weights #3
+*	final val MODULE_WEIGHT = 0;		// Not required for MDG file since Bunch must deduce this 
+	final val WRITE_WEIGHT = 15/*0*/;	// Use higher values for target-driven decomposition
+	final val READ_WEIGHT = 10;			// Use higher values for source-driven decomposition
+	final val CALL_WEIGHT = 20;			// Should be sufficiently high to regard call structure
+	final val PACKAGE_WEIGHT = 15/*0*/;	// Only use if package structure should be respected
+	final val REFERENCE_WEIGHT = 0;		// Consider references between classes (and thus across packages)
+	final val CONTAINMENT_WEIGHT = 0;	// Consider containment references between classes
+	final val INHERITANCE_WEIGHT = 0;	// Inheritance is another form of reference
+*	if (w < weight)						// non-cumulative, just take the maximum value
+		matrix.put(from, to, weight)
+
+Weights #4		
+*	final val MODULE_WEIGHT = 0;		// Not required for MDG file since Bunch must deduce this 
+	final val WRITE_WEIGHT = 15/*0*/;	// Use higher values for target-driven decomposition
+	final val READ_WEIGHT = 5;			// Use higher values for source-driven decomposition
+	final val CALL_WEIGHT = 10;			// Should be sufficiently high to regard call structure
+	final val PACKAGE_WEIGHT = 15/*0*/;	// Only use if package structure should be respected
+	final val REFERENCE_WEIGHT = 0;		// Consider references between classes (and thus across packages)
+	final val CONTAINMENT_WEIGHT = 0;	// Consider containment references between classes
+	final val INHERITANCE_WEIGHT = 0;	// Inheritance is another form of reference
+*	if (w < weight)						// non-cumulative, just take the maximum value
+		matrix.put(from, to, weight)
+
+Weights #5
+*	final val MODULE_WEIGHT = 0;		// Not required for MDG file since Bunch must deduce this 
+	final val WRITE_WEIGHT = 15/*0*/;	// Use higher values for target-driven decomposition
+	final val READ_WEIGHT = 5;			// Use higher values for source-driven decomposition
+	final val CALL_WEIGHT = 20;			// Should be sufficiently high to regard call structure
+	final val PACKAGE_WEIGHT = 15/*0*/;	// Only use if package structure should be respected
+	final val REFERENCE_WEIGHT = 0;		// Consider references between classes (and thus across packages)
+	final val CONTAINMENT_WEIGHT = 0;	// Consider containment references between classes
+	final val INHERITANCE_WEIGHT = 0;	// Inheritance is another form of reference
+*	if (w < weight)						// non-cumulative, just take the maximum value
+		matrix.put(from, to, weight)
+
+## Result for class-level dependencies:
+
+Parameter set HC_100-55-20-OFF, Weights #2
+TODO: recalculate with extra Finder component in SIL file
+*	Incremental MQ Weighted
+	MQ(Bunch) = 4.690/4.932 vs. MQ(Manual) = 6.296
+*	Precision = 31.924, Recall = 31.857%
+*	EdgeSim(A,B) = 58.15
+	MeCl(A,B) = -1340.0%
+	MeCl(B,A) = -770.0%
+
+Parameter set HC_1000-55-20-OFF, Weights #1
+*	With/without model 220/93 nodes, 987/184 edges, 17 manual clusters vs. 14/12 Bunch clusters 
+*	Incremental MQ Weighted
+	MQ(Bunch) = 5.346/5.636 vs. MQ(Manual) = 6.296
+*	Precision = 15.514, Recall = 29.677%
+*	EdgeSim(A,B) = 51.08
+	MeCl(A,B) = -1180.0%
+	MeCl(B,A) = -420.0%
+
+Parameter set HC_1000-100-0-OFF, Weights #1
+TODO: recalculate with extra Finder component in SIL file
+*	Precision = 29.178, Recall = 44.937%
+
+Parameter set HC_1000-100-20-OFF, Weights #1
+TODO: recalculate with extra Finder component in SIL file
+*	Incremental MQ Weighted
+	MQ(Bunch) = 5.060/3.826 vs. MQ(Manual) = 6.296
+*	Precision = 21.005, Recall = 49.367%
+*	EdgeSim(A,B) = 55.97
+	MeCl(A,B) = -940.0%
+	MeCl(B,A) = -480.0%
+
+Parameter set HC_100-80-20-OFF, Weights #1
+*	Incremental MQ Weighted
+	MQ(Bunch) = 5.060/5.945 vs. MQ(Manual) = 6.296
+*	Precision = 23.831, Recall = 22.574%
+*	EdgeSim(A,B) = 58.15 (used to be at 61.95 without Finder component)
+	MeCl(A,B) = -920.0%
+	MeCl(B,A) = -420.0%
+
+Parameter set HC_100-80-20-OFF, Weights #3
+*	Incremental MQ Weighted
+	MQ(Bunch) = 5.292/5.502 vs. MQ(Manual) = 6.296
+*	Precision = 28.03, Recall = 35.806%
+*	EdgeSim(A,B) = 61.95
+	MeCl(A,B) = -760.0%
+	MeCl(B,A) = -440.0%
+
+Parameter set HC_1000-100-10-OFF, Weights #4
+*	Incremental MQ Weighted
+	MQ(Bunch) = 4.124/4.126 vs. MQ(Manual) = 6.296
+*	Precision = 32.24, Recall = 49.789%
+*	EdgeSim(A,B) = 63.04
+	MeCl(A,B) = -240.0%
+	MeCl(B,A) = -240.0%
+
+Parameter set HC_100-100-10-OFF, Weights #4
+*	Incremental MQ Weighted
+	MQ(Bunch) = 4.971/4.375 vs. MQ(Manual) = 6.296
+*	Precision = 32.24, Recall = 49.789%
+*	EdgeSim(A,B) = 64.13
+	MeCl(A,B) = -310.0%
+	MeCl(B,A) = -150.0%
+=> cannot reproduce results/metrics???
+
+Parameter set HC_100-100-10-OFF, Weights #4 '
+*	With/without model 104/93 nodes, 437/184 edges
+	16 manual clusters vs. 17/16 Bunch clusters 
+*	Incremental MQ Weighted
+	MQ(Bunch) = 6.271/5.760 vs. MQ(Manual) = 6.296
+*	Precision = 35.461, Recall = 32.258%
+*	EdgeSim(A,B) = 62.5
+	MeCl(A,B) = -290.0%
+	MeCl(B,A) = -200.0%
+	=> MeCl = -290%
+=>	Can be used in paper: quite good results, given that utility libraries are a questionable practice; 
+	because without reuse, they should be part of the implementation.
+	Sadly, there is no comparison against method-level's MQ index with model elements, because there are no model elements clustered for the latter.
+	But in comparison   
++++
+
+Parameter set HC_100-100-10-OFF, Weights #4 Lib => Manual Library of Finder and Commmons
+*	With/without model 104/93 nodes, 437/184 edges
+	16 manual clusters vs. 8/8 Bunch clusters 
+*	Incremental MQ Weighted
+	MQ(Bunch) = 6.271/2.889 vs. MQ(Manual) = 6.296
+*	Precision = 36.143, Recall = 71.935%
+*	EdgeSim(A,B) = 78.8
+	MeCl(A,B) = -110.0%
+	MeCl(B,A) = -80.0%
+	=> MeCl = -110%
+
+Parameter set HC_100-100-10-OFF, Weights #5
+*	Incremental MQ Weighted
+	MQ(Bunch) = 3.945/4.032 vs. MQ(Manual) = 6.296
+*	Precision = 17.77, Recall = 46.774%
+*	EdgeSim(A,B) = 62.5
+	MeCl(A,B) = -940.0%
+	MeCl(B,A) = -240.0%
+=>	Weights #5 seem to worsen the results, while they improve results on package-level
+
+## Result for package-level dependencies:
+
+Parameter set HC_1000-55-20-OFF ?, Weights #1
+*	With/without model 104/93 nodes, 437/184 edges
+	16 manual clusters vs. 7/7 Bunch clusters 
+*	Incremental MQ Weighted
+	MQ(Bunch) = 2.431/3.431 vs. MQ(Manual) = 6.296
+*	Precision = 11.836, Recall = 34.516%
+*	EdgeSim(A,B) = 58.69
+	MeCl(A,B) = -940.0%
+	MeCl(B,A) = -380.0%
+
+Parameter set HC_100-100-10-OFF, Weights #4
+*	With/without model 104/93 nodes, 437/184 edges
+	16 manual clusters vs. 7/7 Bunch clusters 
+*	Incremental MQ Weighted
+	MQ(Bunch) = 3.973/5.068 vs. MQ(Manual) = 6.296
+*	Precision = 14.224, Recall = 31.935%
+*	EdgeSim(A,B) = 54.34
+	MeCl(A,B) = -550.0%
+	MeCl(B,A) = -90.0%
+=>	can be used in paper. better results than on method-level, worse than on class-level
+
+Parameter set HC_100-100-10-OFF, Weights #5 (more weight on calls than in #4)
+*	Incremental MQ Weighted
+	MQ(Bunch) = 4.002/4.442 vs. MQ(Manual) = 6.296
+*	Precision = 18.871, Recall = 37.742%
+*	EdgeSim(A,B) = 60.32
+	MeCl(A,B) = -1060.0%
+	MeCl(B,A) = -200.0%
+	=> MeCl = -1060%
+=> can be used additionally in paper: more weight on calls improves results
+++
+
+## Result for method-level dependencies (no model elements considered):
+
+Parameter set HC_1000-55-20-OFF ?, Weights #1 (shouldn't matter, only same weight for calls used)
+*	With/without model -/93 nodes, -/184 edges
+	16 manual clusters vs. -/11 Bunch clusters
+*	Incremental MQ Weighted
+	MQ(Bunch) = -/5.974 vs. MQ(Manual) = 6.296
+*	Precision = 19.512, Recall = 25.806%
+	EdgeSim(A,B) = 57.6
+	MeCl(A,B) = -1140.0%
+	MeCl(B,A) = -360.0%
+=>	I am not sure how I got these PERFECT results..., cannot reproduce ?!
+
+Parameter set HC_100-100-10-OFF, Weights #5 (shouldn't matter, only same weight for calls used)
+First run produced 6 clusters
+*	Incremental MQ Weighted
+	MQ(Bunch) = -/3.399 vs. MQ(Manual) = 6.296
+*	Precision = 16.195, Recall = 40.645%
+	EdgeSim(A,B) = 49.45
+	MeCl(A,B) = -1380.0%
+	MeCl(B,A) = -280.0%
+Second run produced 9 clusters
+*	Incremental MQ Weighted
+	MQ(Bunch) = -/4.470 vs. MQ(Manual) = 6.296
+*	Precision = 14.395, Recall = 24.194%
+	EdgeSim(A,B) = 46.73
+	MeCl(A,B) = -1260.0%
+	MeCl(B,A) = -500.0%
+	=> MeCl = -1260%
+=>	can be used in paper: ok-ish results, bad similarity
++
+
+Wilcox test (better for smaller samples)
+========================================
+
+class-level (HC_100-100-10-OFF W4 Lib)
+#	MQ		Prec.	Recall	EdgeSim	MeCl
+1	3.871	34.938	72.581	72.28	-160
+2	2.652	23.391	73.871	79.89	-100
+3	3.594	33.465	81.935	80.43	-140
+4	2.007	22.201	76.129	76.08	-120
+5	2.861	28.090	80.645	83.69	-80
+
+methods-only (HC_100-90-10-OFF W5)
+#	MQ		Prec.	Recall	EdgeSim	MeCl
+0	3.399	16.195	40.645	49.45	-1380
+1	4.470	14.395	24.194	46.73	-1260
+2	3.740	17.169	36.774	61.95	-1040
+3	4.354	21.683	43.226	53.80	-1340
+4	6.743	28.342	34.194	52.17	-1320
+5	4.157	15.975	33.548	44.56	-1440

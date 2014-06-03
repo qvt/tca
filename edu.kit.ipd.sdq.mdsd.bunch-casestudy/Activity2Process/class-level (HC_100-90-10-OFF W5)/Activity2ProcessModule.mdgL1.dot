@@ -1,0 +1,85 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.6521739130434783*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster2 {
+label = "(SS-L1):helper_CompositeAction2StepModule_createProcess";
+color = black;
+style = bold;
+
+"mapping_Action2StepModule_Action2Step2"[label="mapping_Action2StepModule_Action2Step2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"mapping_Action2StepModule_Action2Step3"[label="mapping_Action2StepModule_Action2Step3",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"class_process_Step"[label="class_process_Step",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"mapping_Action2StepModule_Action2Step"[label="mapping_Action2StepModule_Action2Step",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"class_core_Action"[label="class_core_Action",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"mapping_CompositeAction2StepModule_Action2Step"[label="mapping_CompositeAction2StepModule_Action2Step",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_CompositeAction2StepModule_createProcess"[label="helper_CompositeAction2StepModule_createProcess",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster3 {
+label = "(SS-L1):mapping_Activity2ProcessModule_Activity2Process";
+color = black;
+style = bold;
+
+"class_process_Process"[label="class_process_Process",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"package_process"[label="package_process",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"class_core_Activity"[label="class_core_Activity",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"entry_Activity2ProcessModule_main"[label="entry_Activity2ProcessModule_main",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"mapping_Activity2ProcessModule_Activity2Process"[label="mapping_Activity2ProcessModule_Activity2Process",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"class_composite_CompositeAction"[label="class_composite_CompositeAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"package_composite"[label="package_composite",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster4 {
+label = "(SS-L1):package_core";
+color = black;
+style = bold;
+
+"class_core_BasicAction"[label="class_core_BasicAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"class_core_StopAction"[label="class_core_StopAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"package_core"[label="package_core",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"class_core_StartAction"[label="class_core_StartAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"mapping_Action2StepModule_Action2Step" -> "class_process_Step" [color=blue,font=6];
+"mapping_Action2StepModule_Action2Step" -> "class_core_Action" [color=blue,font=6];
+"class_process_Step" -> "package_process" [color=blue,font=6];
+"helper_CompositeAction2StepModule_createProcess" -> "mapping_Action2StepModule_Action2Step" [color=blue,font=6];
+"helper_CompositeAction2StepModule_createProcess" -> "mapping_Action2StepModule_Action2Step3" [color=blue,font=6];
+"helper_CompositeAction2StepModule_createProcess" -> "mapping_Action2StepModule_Action2Step2" [color=blue,font=6];
+"helper_CompositeAction2StepModule_createProcess" -> "class_process_Step" [color=blue,font=6];
+"helper_CompositeAction2StepModule_createProcess" -> "class_core_Action" [color=blue,font=6];
+"helper_CompositeAction2StepModule_createProcess" -> "class_process_Process" [color=blue,font=6];
+"helper_CompositeAction2StepModule_createProcess" -> "class_core_Activity" [color=blue,font=6];
+"mapping_CompositeAction2StepModule_Action2Step" -> "class_core_Action" [color=blue,font=6];
+"mapping_CompositeAction2StepModule_Action2Step" -> "class_process_Step" [color=blue,font=6];
+"mapping_CompositeAction2StepModule_Action2Step" -> "class_composite_CompositeAction" [color=blue,font=6];
+"mapping_CompositeAction2StepModule_Action2Step" -> "helper_CompositeAction2StepModule_createProcess" [color=blue,font=6];
+"mapping_CompositeAction2StepModule_Action2Step" -> "class_process_Process" [color=blue,font=6];
+"entry_Activity2ProcessModule_main" -> "package_core" [color=blue,font=6];
+"entry_Activity2ProcessModule_main" -> "mapping_Activity2ProcessModule_Activity2Process" [color=blue,font=6];
+"entry_Activity2ProcessModule_main" -> "class_process_Process" [color=blue,font=6];
+"entry_Activity2ProcessModule_main" -> "class_core_Activity" [color=blue,font=6];
+"class_composite_CompositeAction" -> "package_composite" [color=blue,font=6];
+"class_core_Action" -> "package_core" [color=blue,font=6];
+"class_core_BasicAction" -> "package_core" [color=blue,font=6];
+"class_core_Activity" -> "package_core" [color=blue,font=6];
+"mapping_Activity2ProcessModule_Activity2Process" -> "mapping_CompositeAction2StepModule_Action2Step" [color=blue,font=6];
+"mapping_Activity2ProcessModule_Activity2Process" -> "mapping_Action2StepModule_Action2Step" [color=blue,font=6];
+"mapping_Activity2ProcessModule_Activity2Process" -> "mapping_Action2StepModule_Action2Step3" [color=blue,font=6];
+"mapping_Activity2ProcessModule_Activity2Process" -> "mapping_Action2StepModule_Action2Step2" [color=blue,font=6];
+"mapping_Activity2ProcessModule_Activity2Process" -> "class_process_Step" [color=blue,font=6];
+"mapping_Activity2ProcessModule_Activity2Process" -> "class_core_Action" [color=blue,font=6];
+"mapping_Activity2ProcessModule_Activity2Process" -> "class_process_Process" [color=blue,font=6];
+"mapping_Activity2ProcessModule_Activity2Process" -> "class_core_Activity" [color=blue,font=6];
+"class_process_Process" -> "package_process" [color=blue,font=6];
+"class_core_StartAction" -> "package_core" [color=blue,font=6];
+"mapping_Action2StepModule_Action2Step3" -> "mapping_Action2StepModule_Action2Step" [color=blue,font=6];
+"mapping_Action2StepModule_Action2Step3" -> "class_core_StopAction" [color=blue,font=6];
+"mapping_Action2StepModule_Action2Step3" -> "class_process_Step" [color=blue,font=6];
+"mapping_Action2StepModule_Action2Step2" -> "mapping_Action2StepModule_Action2Step" [color=blue,font=6];
+"mapping_Action2StepModule_Action2Step2" -> "class_core_StartAction" [color=blue,font=6];
+"mapping_Action2StepModule_Action2Step2" -> "class_process_Step" [color=blue,font=6];
+"class_core_StopAction" -> "package_core" [color=blue,font=6];
+}

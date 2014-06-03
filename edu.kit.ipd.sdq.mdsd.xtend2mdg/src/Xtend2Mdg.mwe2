@@ -1,0 +1,90 @@
+module edu.kit.ipd.sdq.mdsd.xtend2mdg.XtendParser
+
+import org.eclipse.emf.mwe.utils.*
+import org.eclipse.xtext.ecore.*
+
+var targetDir = "src-gen"
+var projectName = "de.uka.ipd.sdq.pcm.m2m.xtend" //"CM2Java.xtend"
+var projectPath = "../${projectName}"
+var sourceFolder = "src-transforms/de/uka/ipd/sdq/pcm/m2m/xtend/transformations" //"src/transformations"
+
+Workflow {
+	bean = StandaloneSetup {	
+		scanClassPath = true
+		
+		// Help to resolve Ecore models that are imported by pcm.ecore loaded below
+    	uriMap = Mapping {
+    		from = "platform:/plugin/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+    		to = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+    	}
+    	uriMap = Mapping {
+    		from = "platform:/plugin/de.uka.ipd.sdq.units/model/Units.ecore"
+    		to = "platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore"
+    	}
+    	uriMap = Mapping {
+    		from = "platform:/plugin/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+    		to = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+    	}
+    	uriMap = Mapping {
+    		from = "platform:/plugin/de.uka.ipd.sdq.pcm/model/pcm.ecore"
+    		to = "platform:/resource/de.uka.ipd.sdq.pcm/model/pcm.ecore"
+    	}
+    	uriMap = Mapping {
+    		from = "platform:/plugin/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+    		to = "platform:/resource/de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.ecore"
+    	}
+    	
+//		registerEcoreFile = "platform:/resource/de.uka.ipd.sdq.identifier/model/identifier.ecore"
+//		registerEcoreFile = "platform:/resource/de.uka.ipd.sdq.units/model/Units.ecore"
+//		registerEcoreFile = "platform:/resource/de.uka.ipd.sdq.stoex/model/stoex.ecore"
+//		registerEcoreFile = "platform:/resource/de.uka.ipd.sdq.pcm/model/pcm.ecore"
+//		registerEcoreFile = "platform:/resource/de.uka.ipd.sdq.pcm/model/pcm.ecore"
+//		registerGeneratedEPackage = "de.uka.ipd.sdq.pcm.PcmPackage"
+    }
+    
+	// Component for reading Xtend scripts
+	component = org.eclipse.xtext.mwe.Reader {
+		path = "${projectPath}/${sourceFolder}"
+		
+		register = org.eclipse.xtend.core.XtendStandaloneSetup {}
+		
+		loadResource = {
+			slot = "resources"
+			uri = ".*\\.xtend$"
+		}
+	}
+	
+	component = Reader {
+		uri = "platform:/resource/de.uka.ipd.sdq.pcm/model/pcm.ecore"
+		modelSlot = "metamodel"
+	}
+
+	component = DirectoryCleaner {
+		directory = targetDir
+	}
+
+	// parse .ecore models	
+	component = EcoreSupport { }
+	
+	component = Xtend2MdgGeneratorSupport {}
+
+	component = MergeResourcesComponent {
+		inputSlot = "resources"
+		inputSlot = "metamodel"
+		outputSlot = "resource"
+	}
+
+	// Activates Generator.xtend in order to use the Xtend2Mdg script
+	// NB: XMLEncodingError is thrown, yet the output is correct
+	//     see https://bugs.eclipse.org/bugs/show_bug.cgi?id=409069
+	component = org.eclipse.xtext.generator.GeneratorComponent {
+		
+		register = Xtend2MdgGeneratorSetup { }
+		slot = "resource"
+
+		outlet = {
+			path = targetDir
+		}
+	}
+	
+}

@@ -1,0 +1,340 @@
+/* ------------------------------------------------------------ */
+/* created with bunch v3 */
+/* Objective Function value = 1.0144927536231885*/
+/* ------------------------------------------------------------ */
+
+digraph G {
+size= "10,10";
+rotate = 90;
+subgraph cluster0 {
+label = "(SS-L3):helper_events2ClassicPCM_processSourceRoleChannelConnection";
+color = black;
+style = bold;
+
+"helper_EventFilter_createComponent"[label="helper_EventFilter_createComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_EventFilter_create"[label="helper_EventFilter_create",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_EventDistribution_create"[label="helper_EventDistribution_create",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_EventDistribution_createComponent"[label="helper_EventDistribution_createComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_EventChannelMiddlewareRegistry_find"[label="helper_EventChannelMiddlewareRegistry_find",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_EventChannelMiddlewareRegistry_getIdentifier"[label="helper_EventChannelMiddlewareRegistry_getIdentifier",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_EventChannelMiddlewareRegistry_register"[label="helper_EventChannelMiddlewareRegistry_register",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"mapping_Commons_createOperationRequiredRole2"[label="mapping_Commons_createOperationRequiredRole2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_getOperationRequiredRole"[label="helper_Commons_getOperationRequiredRole",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection"[label="helper_events2ClassicPCM_processSourceRoleChannelConnection",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection"[label="helper_events2ClassicPCM_processSourceRoleDirectConnection",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAllocation2"[label="helper_events2ClassicPCM_Finder_findAllocation2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SinkCommunication_create"[label="helper_SinkCommunication_create",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_deployAndConnect"[label="helper_Commons_deployAndConnect",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createBasicSEFFWithForkAction"[label="helper_SEFFUtil_createBasicSEFFWithForkAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createForkAction"[label="helper_SEFFUtil_createForkAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_createAssemblyContext2"[label="helper_Commons_createAssemblyContext2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_createAssemblyContext"[label="helper_Commons_createAssemblyContext",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_createAllocationContext"[label="helper_Commons_createAllocationContext",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAllAssemblyAllocations"[label="helper_events2ClassicPCM_Finder_findAllAssemblyAllocations",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findResourceContainer"[label="helper_events2ClassicPCM_Finder_findResourceContainer",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createForwardingExternalCallAction"[label="helper_SEFFUtil_createForwardingExternalCallAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createForkBehaviour"[label="helper_SEFFUtil_createForkBehaviour",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster1 {
+label = "(SS-L3):helper_SEFFUtil_createForwardingSEFF";
+color = black;
+style = bold;
+
+"helper_SourcePort_create"[label="helper_SourcePort_create",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SourcePort_createComponent"[label="helper_SourcePort_createComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_createOperationRequiredRole"[label="helper_Commons_createOperationRequiredRole",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_EventDistribution_addSinkRequiredRole"[label="helper_EventDistribution_addSinkRequiredRole",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_createOperationProvidedRole"[label="helper_Commons_createOperationProvidedRole",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SinkCommunication_createComponent"[label="helper_SinkCommunication_createComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_createBasicComponent"[label="helper_Commons_createBasicComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createForwardingSEFF"[label="helper_SEFFUtil_createForwardingSEFF",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFRegistry_registerSEFF"[label="helper_SEFFRegistry_registerSEFF",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createSEFFWithBranchAction"[label="helper_SEFFUtil_createSEFFWithBranchAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createEmptyBranchAction"[label="helper_SEFFUtil_createEmptyBranchAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFRegistry_getCombinedIdentifier"[label="helper_SEFFRegistry_getCombinedIdentifier",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFRegistry_findSEFF"[label="helper_SEFFRegistry_findSEFF",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SinkPort_createComponent"[label="helper_SinkPort_createComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SinkPort_create"[label="helper_SinkPort_create",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SourceCommunication_createComponent"[label="helper_SourceCommunication_createComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SourceCommunication_create"[label="helper_SourceCommunication_create",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster2 {
+label = "(SS-L3):helper_events2ClassicPCM_Finder_findAllEventChannelAllocations";
+color = black;
+style = bold;
+
+"helper_events2ClassicPCM_Finder_findResourceContainer2"[label="helper_events2ClassicPCM_Finder_findResourceContainer2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAllEventChannelAllocations"[label="helper_events2ClassicPCM_Finder_findAllEventChannelAllocations",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAllAssemblyContextsWithSourceRoles"[label="helper_events2ClassicPCM_Finder_findAllAssemblyContextsWithSourceRoles",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAllSourceRoles2"[label="helper_events2ClassicPCM_Finder_findAllSourceRoles2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster3 {
+label = "(SS-L3):helper_events2ClassicPCM_setupEventChannelMiddleware";
+color = black;
+style = bold;
+
+"helper_events2ClassicPCM_Finder_findMiddlewareContainer"[label="helper_events2ClassicPCM_Finder_findMiddlewareContainer",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAllocation"[label="helper_events2ClassicPCM_Finder_findAllocation",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_setupCentralMiddleware"[label="helper_events2ClassicPCM_setupCentralMiddleware",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findOperationProvidedRole"[label="helper_events2ClassicPCM_Finder_findOperationProvidedRole",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_setupEventChannelMiddleware"[label="helper_events2ClassicPCM_setupEventChannelMiddleware",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findSystem"[label="helper_events2ClassicPCM_Finder_findSystem",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Source_transformEmitEventActions"[label="helper_Source_transformEmitEventActions",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Source_createExternalCallAction"[label="helper_Source_createExternalCallAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_VariableUtil_buildCompleteForwardingVariableUsageSet"[label="helper_VariableUtil_buildCompleteForwardingVariableUsageSet",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_VariableUtil_createVariableUsage"[label="helper_VariableUtil_createVariableUsage",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_VariableUtil_createVariableCharacterisation"[label="helper_VariableUtil_createVariableCharacterisation",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_VariableUtil_createVariableReference"[label="helper_VariableUtil_createVariableReference",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_getListOfVariableCharacterisationTypes"[label="helper_Commons_getListOfVariableCharacterisationTypes",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_VariableUtil_createVariableUsage2"[label="helper_VariableUtil_createVariableUsage2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Transformation_createVariableUsage"[label="helper_events2ClassicPCM_Transformation_createVariableUsage",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_VariableUtil_completeVariableCharacterizations"[label="helper_VariableUtil_completeVariableCharacterizations",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_VariableUtil_createDefaultVariableCharacterisation"[label="helper_VariableUtil_createDefaultVariableCharacterisation",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_switchToOperationSignature"[label="helper_SEFFUtil_switchToOperationSignature",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_OperationSignatureRegistry_findSignature"[label="helper_OperationSignatureRegistry_findSignature",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster4 {
+label = "(SS-L3):helper_SEFFUtil_createStopAction";
+color = black;
+style = bold;
+
+"helper_SEFFUtil_createStopAction"[label="helper_SEFFUtil_createStopAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createGuardedBranchTransitionWithExternalCall"[label="helper_SEFFUtil_createGuardedBranchTransitionWithExternalCall",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAssemblyEventConnectors"[label="helper_events2ClassicPCM_Finder_findAssemblyEventConnectors",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_processSourceRole"[label="helper_events2ClassicPCM_processSourceRole",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findEventChannelSourceConnectors"[label="helper_events2ClassicPCM_Finder_findEventChannelSourceConnectors",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster5 {
+label = "(SS-L3):helper_Commons_getUniqueElementNameSuffix";
+color = black;
+style = bold;
+
+"helper_Sink_connectComponent2"[label="helper_Sink_connectComponent2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Sink_adoptAndConnect2"[label="helper_Sink_adoptAndConnect2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_getUniqueElementNameSuffix"[label="helper_Commons_getUniqueElementNameSuffix",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"mapping_Sink_createSinkOperationProvidedRole"[label="mapping_Sink_createSinkOperationProvidedRole",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_addExternalCallActionToSeff"[label="helper_SEFFUtil_addExternalCallActionToSeff",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_connect"[label="helper_Commons_connect",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Transformation_connectComponentToMiddleware"[label="helper_events2ClassicPCM_Transformation_connectComponentToMiddleware",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Sink_connectComponent"[label="helper_Sink_connectComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_OperationSignatureRegistry_findOperationInterface2"[label="helper_OperationSignatureRegistry_findOperationInterface2",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Sink_adoptAndConnect"[label="helper_Sink_adoptAndConnect",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster6 {
+label = "(SS-L3):helper_events2ClassicPCM_Transformation_weaveInMiddleware";
+color = black;
+style = bold;
+
+"mapping_Commons_createAssemblyContext3"[label="mapping_Commons_createAssemblyContext3",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_Commons_getProvidingComponent"[label="helper_Commons_getProvidingComponent",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Transformation_weaveInMiddleware"[label="helper_events2ClassicPCM_Transformation_weaveInMiddleware",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_OperationSignatureRegistry_registerSignature"[label="helper_OperationSignatureRegistry_registerSignature",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_InterfaceUtil_createOperationSignature"[label="helper_InterfaceUtil_createOperationSignature",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_OperationSignatureRegistry_findOperationInterface"[label="helper_OperationSignatureRegistry_findOperationInterface",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_OperationSignatureRegistry_getCombinedIdentifier"[label="helper_OperationSignatureRegistry_getCombinedIdentifier",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster7 {
+label = "(SS-L3):helper_SEFFUtil_createStartAction";
+color = black;
+style = bold;
+
+"helper_SEFFUtil_createGuardedBranchTransitionWithOnlyStartToStop"[label="helper_SEFFUtil_createGuardedBranchTransitionWithOnlyStartToStop",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_SEFFUtil_createStartAction"[label="helper_SEFFUtil_createStartAction",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+subgraph cluster8 {
+label = "(SS-L3):entry_events2ClassicPCM_main";
+color = black;
+style = bold;
+
+"helper_events2ClassicPCM_removeEventModelElements"[label="helper_events2ClassicPCM_removeEventModelElements",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"entry_events2ClassicPCM_main"[label="entry_events2ClassicPCM_main",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_InterfaceUtil_createOperationInterface"[label="helper_InterfaceUtil_createOperationInterface",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_createOperationInterfaces"[label="helper_events2ClassicPCM_createOperationInterfaces",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAllEventGroups"[label="helper_events2ClassicPCM_Finder_findAllEventGroups",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+"helper_events2ClassicPCM_Finder_findAllSourceRoles"[label="helper_events2ClassicPCM_Finder_findAllSourceRoles",shape=ellipse,color=lightblue,fontcolor=black,style=filled];
+}
+"helper_EventFilter_create" -> "helper_EventFilter_createComponent" [color=blue,font=6];
+"helper_EventFilter_create" -> "helper_Commons_deployAndConnect" [color=blue,font=6];
+"helper_EventDistribution_addSinkRequiredRole" -> "helper_Commons_createOperationRequiredRole" [color=blue,font=6];
+"helper_EventDistribution_addSinkRequiredRole" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_EventDistribution_addSinkRequiredRole" -> "helper_SEFFUtil_createForkBehaviour" [color=blue,font=6];
+"helper_events2ClassicPCM_Finder_findResourceContainer2" -> "helper_events2ClassicPCM_Finder_findAllEventChannelAllocations" [color=blue,font=6];
+"helper_Commons_createAssemblyContext" -> "helper_Commons_createAssemblyContext2" [color=blue,font=6];
+"helper_SEFFUtil_createSEFFWithBranchAction" -> "helper_SEFFUtil_createStartAction" [color=blue,font=6];
+"helper_SEFFUtil_createSEFFWithBranchAction" -> "helper_SEFFRegistry_registerSEFF" [color=blue,font=6];
+"helper_SEFFUtil_createSEFFWithBranchAction" -> "helper_SEFFUtil_createGuardedBranchTransitionWithOnlyStartToStop" [color=blue,font=6];
+"helper_SEFFUtil_createSEFFWithBranchAction" -> "helper_SEFFUtil_createStopAction" [color=blue,font=6];
+"helper_SEFFUtil_createSEFFWithBranchAction" -> "helper_SEFFUtil_createEmptyBranchAction" [color=blue,font=6];
+"helper_SEFFUtil_createSEFFWithBranchAction" -> "helper_SEFFUtil_createGuardedBranchTransitionWithExternalCall" [color=blue,font=6];
+"helper_events2ClassicPCM_setupCentralMiddleware" -> "helper_events2ClassicPCM_Finder_findSystem" [color=blue,font=6];
+"helper_events2ClassicPCM_setupCentralMiddleware" -> "helper_events2ClassicPCM_Finder_findOperationProvidedRole" [color=blue,font=6];
+"helper_events2ClassicPCM_setupCentralMiddleware" -> "helper_Commons_createAssemblyContext2" [color=blue,font=6];
+"helper_events2ClassicPCM_setupCentralMiddleware" -> "helper_events2ClassicPCM_Finder_findAllocation" [color=blue,font=6];
+"helper_events2ClassicPCM_setupCentralMiddleware" -> "helper_events2ClassicPCM_Finder_findMiddlewareContainer" [color=blue,font=6];
+"helper_events2ClassicPCM_setupCentralMiddleware" -> "helper_Commons_getProvidingComponent" [color=blue,font=6];
+"helper_events2ClassicPCM_setupEventChannelMiddleware" -> "helper_events2ClassicPCM_Finder_findSystem" [color=blue,font=6];
+"helper_events2ClassicPCM_setupEventChannelMiddleware" -> "helper_events2ClassicPCM_Finder_findOperationProvidedRole" [color=blue,font=6];
+"helper_events2ClassicPCM_setupEventChannelMiddleware" -> "helper_Commons_createAssemblyContext2" [color=blue,font=6];
+"helper_events2ClassicPCM_setupEventChannelMiddleware" -> "helper_events2ClassicPCM_Finder_findAllocation" [color=blue,font=6];
+"helper_events2ClassicPCM_setupEventChannelMiddleware" -> "helper_Commons_getProvidingComponent" [color=blue,font=6];
+"helper_events2ClassicPCM_setupEventChannelMiddleware" -> "helper_EventChannelMiddlewareRegistry_register" [color=blue,font=6];
+"helper_SinkPort_create" -> "helper_SinkPort_createComponent" [color=blue,font=6];
+"helper_SinkPort_create" -> "helper_Commons_deployAndConnect" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_createVariableUsage" -> "helper_Commons_getListOfVariableCharacterisationTypes" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_createVariableUsage" -> "helper_VariableUtil_createVariableCharacterisation" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_createVariableUsage" -> "helper_VariableUtil_createVariableReference" [color=blue,font=6];
+"mapping_Sink_createSinkOperationProvidedRole" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_SourcePort_create" -> "helper_SourcePort_createComponent" [color=blue,font=6];
+"helper_SourcePort_create" -> "helper_Commons_deployAndConnect" [color=blue,font=6];
+"helper_SEFFRegistry_registerSEFF" -> "helper_SEFFRegistry_getCombinedIdentifier" [color=blue,font=6];
+"helper_VariableUtil_completeVariableCharacterizations" -> "helper_Commons_getListOfVariableCharacterisationTypes" [color=blue,font=6];
+"helper_VariableUtil_completeVariableCharacterizations" -> "helper_VariableUtil_createDefaultVariableCharacterisation" [color=blue,font=6];
+"helper_OperationSignatureRegistry_registerSignature" -> "helper_OperationSignatureRegistry_getCombinedIdentifier" [color=blue,font=6];
+"helper_Sink_connectComponent" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_VariableUtil_buildCompleteForwardingVariableUsageSet" -> "helper_VariableUtil_createVariableUsage" [color=blue,font=6];
+"helper_EventDistribution_create" -> "helper_EventDistribution_createComponent" [color=blue,font=6];
+"helper_EventDistribution_create" -> "helper_Commons_deployAndConnect" [color=blue,font=6];
+"helper_Sink_adoptAndConnect2" -> "mapping_Sink_createSinkOperationProvidedRole" [color=blue,font=6];
+"helper_Sink_adoptAndConnect2" -> "helper_Sink_connectComponent2" [color=blue,font=6];
+"helper_Sink_adoptAndConnect2" -> "helper_OperationSignatureRegistry_findOperationInterface2" [color=blue,font=6];
+"helper_Sink_adoptAndConnect2" -> "helper_SEFFUtil_switchToOperationSignature" [color=blue,font=6];
+"helper_OperationSignatureRegistry_findOperationInterface2" -> "helper_OperationSignatureRegistry_getCombinedIdentifier" [color=blue,font=6];
+"helper_EventFilter_createComponent" -> "helper_Commons_createBasicComponent" [color=blue,font=6];
+"helper_EventFilter_createComponent" -> "helper_Commons_createOperationRequiredRole" [color=blue,font=6];
+"helper_EventFilter_createComponent" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_EventFilter_createComponent" -> "helper_Commons_createOperationProvidedRole" [color=blue,font=6];
+"helper_EventFilter_createComponent" -> "helper_SEFFUtil_createSEFFWithBranchAction" [color=blue,font=6];
+"helper_VariableUtil_createVariableUsage2" -> "helper_Commons_getListOfVariableCharacterisationTypes" [color=blue,font=6];
+"helper_VariableUtil_createVariableUsage2" -> "helper_VariableUtil_createVariableCharacterisation" [color=blue,font=6];
+"helper_VariableUtil_createVariableUsage2" -> "helper_VariableUtil_createVariableReference" [color=blue,font=6];
+"helper_InterfaceUtil_createOperationInterface" -> "helper_InterfaceUtil_createOperationSignature" [color=blue,font=6];
+"helper_SourceCommunication_create" -> "helper_SourceCommunication_createComponent" [color=blue,font=6];
+"helper_SourceCommunication_create" -> "helper_Commons_deployAndConnect" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_OperationSignatureRegistry_findOperationInterface" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "mapping_Commons_createOperationRequiredRole2" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_Sink_adoptAndConnect2" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_SourcePort_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_events2ClassicPCM_Finder_findResourceContainer2" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_EventDistribution_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_events2ClassicPCM_Finder_findAllocation2" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_events2ClassicPCM_Transformation_weaveInMiddleware" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_events2ClassicPCM_Finder_findResourceContainer" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_EventChannelMiddlewareRegistry_find" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_SinkPort_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_EventFilter_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_SinkCommunication_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_Commons_getOperationRequiredRole" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_SourceCommunication_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_EventDistribution_addSinkRequiredRole" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_Source_transformEmitEventActions" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleChannelConnection" -> "helper_events2ClassicPCM_Finder_findSystem" [color=blue,font=6];
+"helper_SEFFRegistry_findSEFF" -> "helper_SEFFRegistry_getCombinedIdentifier" [color=blue,font=6];
+"helper_VariableUtil_createVariableUsage" -> "helper_VariableUtil_createVariableUsage2" [color=blue,font=6];
+"helper_events2ClassicPCM_Finder_findAllEventGroups" -> "helper_events2ClassicPCM_Finder_findAllSourceRoles" [color=blue,font=6];
+"helper_SEFFUtil_createGuardedBranchTransitionWithOnlyStartToStop" -> "helper_SEFFUtil_createStartAction" [color=blue,font=6];
+"helper_SEFFUtil_createGuardedBranchTransitionWithOnlyStartToStop" -> "helper_SEFFUtil_createStopAction" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_weaveInMiddleware" -> "helper_events2ClassicPCM_Finder_findOperationProvidedRole" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_weaveInMiddleware" -> "helper_events2ClassicPCM_Transformation_connectComponentToMiddleware" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_weaveInMiddleware" -> "mapping_Commons_createAssemblyContext3" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_weaveInMiddleware" -> "helper_Commons_getProvidingComponent" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_events2ClassicPCM_Finder_findAllocation2" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_events2ClassicPCM_Finder_findMiddlewareContainer" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_Commons_getOperationRequiredRole" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_events2ClassicPCM_Finder_findResourceContainer" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_SinkCommunication_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_Sink_adoptAndConnect" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "mapping_Commons_createOperationRequiredRole2" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_SourceCommunication_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_EventFilter_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_EventDistribution_addSinkRequiredRole" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_Source_transformEmitEventActions" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_events2ClassicPCM_Finder_findSystem" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_SourcePort_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_SinkPort_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_EventDistribution_create" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_OperationSignatureRegistry_findOperationInterface" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRoleDirectConnection" -> "helper_events2ClassicPCM_Transformation_weaveInMiddleware" [color=blue,font=6];
+"helper_events2ClassicPCM_removeEventModelElements" -> "helper_events2ClassicPCM_Finder_findAllEventChannelAllocations" [color=blue,font=6];
+"helper_Source_transformEmitEventActions" -> "helper_Source_createExternalCallAction" [color=blue,font=6];
+"helper_SEFFUtil_createGuardedBranchTransitionWithExternalCall" -> "helper_SEFFUtil_createStartAction" [color=blue,font=6];
+"helper_SEFFUtil_createGuardedBranchTransitionWithExternalCall" -> "helper_SEFFUtil_createStopAction" [color=blue,font=6];
+"helper_SEFFUtil_createGuardedBranchTransitionWithExternalCall" -> "helper_SEFFUtil_createForwardingExternalCallAction" [color=blue,font=6];
+"helper_SinkPort_createComponent" -> "helper_Commons_createBasicComponent" [color=blue,font=6];
+"helper_SinkPort_createComponent" -> "helper_Commons_createOperationRequiredRole" [color=blue,font=6];
+"helper_SinkPort_createComponent" -> "helper_SEFFUtil_createForwardingSEFF" [color=blue,font=6];
+"helper_SinkPort_createComponent" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_SinkPort_createComponent" -> "helper_Commons_createOperationProvidedRole" [color=blue,font=6];
+"helper_SinkCommunication_createComponent" -> "helper_Commons_createBasicComponent" [color=blue,font=6];
+"helper_SinkCommunication_createComponent" -> "helper_Commons_createOperationRequiredRole" [color=blue,font=6];
+"helper_SinkCommunication_createComponent" -> "helper_SEFFUtil_createForwardingSEFF" [color=blue,font=6];
+"helper_SinkCommunication_createComponent" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_SinkCommunication_createComponent" -> "helper_Commons_createOperationProvidedRole" [color=blue,font=6];
+"helper_events2ClassicPCM_Finder_findResourceContainer" -> "helper_events2ClassicPCM_Finder_findAllAssemblyAllocations" [color=blue,font=6];
+"helper_OperationSignatureRegistry_findSignature" -> "helper_OperationSignatureRegistry_getCombinedIdentifier" [color=blue,font=6];
+"helper_EventChannelMiddlewareRegistry_register" -> "helper_EventChannelMiddlewareRegistry_getIdentifier" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_connectComponentToMiddleware" -> "helper_Commons_connect" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_connectComponentToMiddleware" -> "helper_SEFFUtil_addExternalCallActionToSeff" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_connectComponentToMiddleware" -> "helper_events2ClassicPCM_Transformation_createVariableUsage" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_connectComponentToMiddleware" -> "helper_Commons_createOperationRequiredRole" [color=blue,font=6];
+"helper_events2ClassicPCM_Transformation_connectComponentToMiddleware" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_SEFFUtil_switchToOperationSignature" -> "helper_OperationSignatureRegistry_findSignature" [color=blue,font=6];
+"helper_OperationSignatureRegistry_findOperationInterface" -> "helper_OperationSignatureRegistry_getCombinedIdentifier" [color=blue,font=6];
+"helper_Sink_adoptAndConnect" -> "mapping_Sink_createSinkOperationProvidedRole" [color=blue,font=6];
+"helper_Sink_adoptAndConnect" -> "helper_Sink_connectComponent" [color=blue,font=6];
+"helper_Sink_adoptAndConnect" -> "helper_OperationSignatureRegistry_findOperationInterface2" [color=blue,font=6];
+"helper_Sink_adoptAndConnect" -> "helper_SEFFUtil_switchToOperationSignature" [color=blue,font=6];
+"helper_Commons_deployAndConnect" -> "helper_Commons_connect" [color=blue,font=6];
+"helper_Commons_deployAndConnect" -> "helper_Commons_createAssemblyContext" [color=blue,font=6];
+"helper_SourceCommunication_createComponent" -> "helper_Commons_createBasicComponent" [color=blue,font=6];
+"helper_SourceCommunication_createComponent" -> "helper_Commons_createOperationRequiredRole" [color=blue,font=6];
+"helper_SourceCommunication_createComponent" -> "helper_SEFFUtil_createForwardingSEFF" [color=blue,font=6];
+"helper_SourceCommunication_createComponent" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_SourceCommunication_createComponent" -> "helper_Commons_createOperationProvidedRole" [color=blue,font=6];
+"mapping_Commons_createAssemblyContext3" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_SEFFUtil_createBasicSEFFWithForkAction" -> "helper_SEFFUtil_createStartAction" [color=blue,font=6];
+"helper_SEFFUtil_createBasicSEFFWithForkAction" -> "helper_SEFFRegistry_registerSEFF" [color=blue,font=6];
+"helper_SEFFUtil_createBasicSEFFWithForkAction" -> "helper_SEFFUtil_createStopAction" [color=blue,font=6];
+"helper_SEFFUtil_createBasicSEFFWithForkAction" -> "helper_SEFFUtil_createForkAction" [color=blue,font=6];
+"helper_SEFFUtil_createForwardingExternalCallAction" -> "helper_VariableUtil_buildCompleteForwardingVariableUsageSet" [color=blue,font=6];
+"helper_EventChannelMiddlewareRegistry_find" -> "helper_EventChannelMiddlewareRegistry_getIdentifier" [color=blue,font=6];
+"helper_EventDistribution_createComponent" -> "helper_Commons_createBasicComponent" [color=blue,font=6];
+"helper_EventDistribution_createComponent" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_EventDistribution_createComponent" -> "helper_Commons_createOperationProvidedRole" [color=blue,font=6];
+"helper_EventDistribution_createComponent" -> "helper_SEFFUtil_createBasicSEFFWithForkAction" [color=blue,font=6];
+"helper_Source_createExternalCallAction" -> "helper_VariableUtil_completeVariableCharacterizations" [color=blue,font=6];
+"helper_Source_createExternalCallAction" -> "helper_OperationSignatureRegistry_findSignature" [color=blue,font=6];
+"entry_events2ClassicPCM_main" -> "helper_events2ClassicPCM_createOperationInterfaces" [color=blue,font=6];
+"entry_events2ClassicPCM_main" -> "helper_events2ClassicPCM_processSourceRole" [color=blue,font=6];
+"entry_events2ClassicPCM_main" -> "helper_events2ClassicPCM_Finder_findAllSourceRoles2" [color=blue,font=6];
+"entry_events2ClassicPCM_main" -> "helper_events2ClassicPCM_setupCentralMiddleware" [color=blue,font=6];
+"entry_events2ClassicPCM_main" -> "helper_events2ClassicPCM_removeEventModelElements" [color=blue,font=6];
+"entry_events2ClassicPCM_main" -> "helper_events2ClassicPCM_Finder_findAllAssemblyContextsWithSourceRoles" [color=blue,font=6];
+"entry_events2ClassicPCM_main" -> "helper_events2ClassicPCM_Finder_findAllEventChannelAllocations" [color=blue,font=6];
+"entry_events2ClassicPCM_main" -> "helper_events2ClassicPCM_setupEventChannelMiddleware" [color=blue,font=6];
+"helper_SEFFUtil_createForkBehaviour" -> "helper_SEFFUtil_createStartAction" [color=blue,font=6];
+"helper_SEFFUtil_createForkBehaviour" -> "helper_SEFFUtil_createStopAction" [color=blue,font=6];
+"helper_SEFFUtil_createForkBehaviour" -> "helper_SEFFUtil_createForwardingExternalCallAction" [color=blue,font=6];
+"helper_Commons_createAssemblyContext2" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_Commons_createAssemblyContext2" -> "helper_Commons_createAllocationContext" [color=blue,font=6];
+"helper_InterfaceUtil_createOperationSignature" -> "helper_OperationSignatureRegistry_registerSignature" [color=blue,font=6];
+"helper_SinkCommunication_create" -> "helper_SinkCommunication_createComponent" [color=blue,font=6];
+"helper_SinkCommunication_create" -> "helper_Commons_deployAndConnect" [color=blue,font=6];
+"helper_SEFFUtil_createForwardingSEFF" -> "helper_SEFFUtil_createStartAction" [color=blue,font=6];
+"helper_SEFFUtil_createForwardingSEFF" -> "helper_SEFFRegistry_registerSEFF" [color=blue,font=6];
+"helper_SEFFUtil_createForwardingSEFF" -> "helper_SEFFUtil_createStopAction" [color=blue,font=6];
+"helper_SEFFUtil_createForwardingSEFF" -> "helper_SEFFUtil_createForwardingExternalCallAction" [color=blue,font=6];
+"helper_Sink_connectComponent2" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_events2ClassicPCM_Finder_findAllAssemblyContextsWithSourceRoles" -> "helper_events2ClassicPCM_Finder_findAllSourceRoles2" [color=blue,font=6];
+"helper_events2ClassicPCM_createOperationInterfaces" -> "helper_events2ClassicPCM_Finder_findAllEventGroups" [color=blue,font=6];
+"helper_events2ClassicPCM_createOperationInterfaces" -> "helper_InterfaceUtil_createOperationInterface" [color=blue,font=6];
+"helper_SourcePort_createComponent" -> "helper_Commons_createBasicComponent" [color=blue,font=6];
+"helper_SourcePort_createComponent" -> "helper_Commons_createOperationRequiredRole" [color=blue,font=6];
+"helper_SourcePort_createComponent" -> "helper_SEFFUtil_createForwardingSEFF" [color=blue,font=6];
+"helper_SourcePort_createComponent" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+"helper_SourcePort_createComponent" -> "helper_Commons_createOperationProvidedRole" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRole" -> "helper_events2ClassicPCM_processSourceRoleDirectConnection" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRole" -> "helper_events2ClassicPCM_processSourceRoleChannelConnection" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRole" -> "helper_events2ClassicPCM_Finder_findEventChannelSourceConnectors" [color=blue,font=6];
+"helper_events2ClassicPCM_processSourceRole" -> "helper_events2ClassicPCM_Finder_findAssemblyEventConnectors" [color=blue,font=6];
+"helper_Commons_connect" -> "helper_Commons_getUniqueElementNameSuffix" [color=blue,font=6];
+}
