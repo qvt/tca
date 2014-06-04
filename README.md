@@ -4,9 +4,9 @@ It is vital to decompose large model transformation programs into manageable mod
  
 In model-driven engineering, model transformations play a critical role as they transform models into other models and finally into executable code. Whereas models are typically structured into packages, transformation programs can be structured into modules to cope with their inherent code complexity. As the models evolve, the structure of transformations steadily deteriorates, and eventually leads to adverse effects on the productivity during maintenance. At the present time, discovering concern\-/based structures of transformation programs to help in understanding and refactoring them remains a manual process.
 
-The approach makes it possible to apply clustering algorithms to find decompositions of transformation programs at the method level. In contrast to clustering techniques for general-purpose languages, we integrate not only method calls but also class and package dependencies of the models into the process. The approach relies on the Bunch tool for finding decompositions with minimal coupling and maximal cohesion.
+This approach makes it possible to apply clustering algorithms to find decompositions of transformation programs at the method level. In contrast to clustering techniques for general-purpose languages, we integrate not only method calls but also class and package dependencies of the models into the process. The approach relies on the Bunch tool for finding decompositions with minimal coupling and maximal cohesion.
 
-The approach had been validated in two case studies, one model-to-model and one model-to-code transformation, where we compare an expert clustering with automatically derived clusterings. We are able to demonstrate that by incorporating model dependencies we gain results that reflect the intended structure significantly better than when incorporating call dependencies alone.
+Our approach had been validated in two case studies, one model-to-model and one model-to-code transformation, where we compare an expert clustering with automatically derived clusterings. We are able to demonstrate that by incorporating model dependencies we gain results that reflect the intended structure significantly better than when incorporating call dependencies alone.
 
 ### Installing
 
