@@ -14,7 +14,8 @@ The approach had been validated in two case studies, one model-to-model and one 
 
 * Download Eclipse [Modeling Tools 4.3 (Kepler)](http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/keplersr1) (Kepler) and launch it;
 * Install through menu **Help > Install Modeling Components...** [Eclipse Xtext 2.5+](http://www.eclipse.org/modeling/tmf/downloads/?project=xtext) of the Model Development Tools (MDT) project; further install [Eclipse QVTo 3.3.0+](http://www.eclipse.org/mmt/?project=qvto)  of the Model to Model Transformation (MMT) project
-* Download [TCA](https://github.com/qvt/tca/zipball/master) and import contained projects through **File > Import > Existing Projects into Workspace…** into your Eclipse workspace.
+* Download [TCA](https://github.com/qvt/tca/zipball/master) and import contained projects through **File > Import > Existing Projects into Workspace…** into your Eclipse workspace. 
+
 <!--(http://qvt.github.io/tca/downloads/tca-0.1.0.zip)-->
 
 You are ready to use the code-to-model transformations to produce Bunch-compatible module dependence graphs (MDG) from QVT-O and Xtend programs. The extant module configuration is extracted as well from the sources and stored as a SIL definition. To do so, configure the respective MWE2 file to refer to the transformation code and the models involved. Additionally, setup the weight configuration (Constants.xtend). Use the run configuration **Generate QVTo Dependency Graph**, or **Generate Xtend Dependency Graph**. Resulting MDG and SIL file are placed into [src-gen](http://github.com/qvt/tca/tree/master/edu.kit.ipd.sdq.mdsd.qvto2mdg/src-gen) or [src-gen](http://github.com/qvt/tca/tree/master/edu.kit.ipd.sdq.mdsd.xtend2mdg/src-gen). 
