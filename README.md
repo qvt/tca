@@ -20,6 +20,9 @@ You are ready to use the code-to-model transformations to produce Bunch-compatib
 
 The MDG file can serve as input to the Bunch tool built at Drexel University, and the output can be compared with the preexisting partition stored in the SIL file using Bunch's built-in metrics.
 
+### Case Studies
+We already used the approach to extract dependence information from two larger transformations from the [Palladio](http://www.palladio-simulator.com) project, PCMEvents2PCM implemented in QVT-O and PCM2SimuCom implemented in Xtend. Results of these studies are stored in a separate Eclipse project, [edu.kit.ipd.sdq.mdsd.bunch-casestudy](https://github.com/qvt/tca/tree/master/edu.kit.ipd.sdq.mdsd.bunch-casestudy).
+
 ### See Also
 * [Modular Model Transformations](https://sdqweb.ipd.kit.edu/wiki/Modular_Model_Transformations), the overall approach behind this project, as well as information for developers.
 * [Xtend2m](http://qvt.github.io/xtend2m/), a modular extension for Xtend2 (hosted at Github).
