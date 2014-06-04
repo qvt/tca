@@ -42,7 +42,7 @@ Results of these studies are stored in a separate Eclipse project, [edu.kit.ipd.
 * [Joakim von Kistowski](http://se.informatik.uni-wuerzburg.de/staff/v_kistowski_joakim/) from University of Würzburg, Germany
 * [Michael Junker](emailto:michael.junker_AtSignGoesHere_student.kit.edu) from Karlsruhe Institute of Technology, Germany
 
-Work has partly been funded by the German Research Foundation (DFG) under under the Priority Programme SPP\,1593: [Design For Future -- Managed Software Evolution](http://www.dfg-spp1593.de).
+Work has partly been funded by the German Research Foundation (DFG) under under the Priority Programme SPP 1593: [Design For Future -- Managed Software Evolution](http://www.dfg-spp1593.de).
 
 <img src="http://qvt.github.io/qvtr2coq/images/Logo_KIT.png" alt="KIT" height="70px"/>&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="http://qvt.github.io/qvtr2coq/images/Logo_PPADVERT.png" alt="ADVERT" height="70px"/>
