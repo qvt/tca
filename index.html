@@ -31,37 +31,53 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+        <p>Large model transformation programs must be decomposed into manageable modules to keep them in a maintainable state. <em>Transformation Cluster Analysis</em> (TCA) is our endeavor to alleviate the effort that is required to reengineer the modular structure of model transformation programs. It does so by automatically extracting dependence information from transformation programs that can be automatically clustered with the <a href="https://www.cs.drexel.edu/%7Espiros/bunch/">Bunch</a> tool. The approach currently supports the model-to-model transformation language <a href="http://www.eclipse.org/mmt/?project=qvto">QVT-Operational</a>, and the <a href="http://www.xtend-lang.org">Xtend</a> language employable as an Ecore-based model-to-text transformation language.</p>
 
 <h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
+<a name="description" class="anchor" href="#description"><span class="octicon octicon-link"></span></a>Description</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>In model-driven engineering, model transformations play a critical role as they transform models into other models and finally into executable code. Whereas models are typically structured into packages, transformation programs can be structured into modules to cope with their inherent code complexity. As the models evolve, the structure of transformations steadily deteriorates, and eventually leads to adverse effects on the productivity during maintenance. At the present time, discovering concern-/based structures of transformation programs to help in understanding and refactoring them remains a manual process.</p>
 
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
+<p>The approach makes it possible to apply clustering algorithms to find decompositions of transformation programs at the method level. In contrast to clustering techniques for general-purpose languages, we integrate not only method calls but also class and package dependencies of the models into the process. The approach relies on the Bunch tool for finding decompositions with minimal coupling and maximal cohesion.</p>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>The approach had been validated in two case studies, one model-to-model and one model-to-code transformation, where we compare an expert clustering with automatically derived clusterings. We are able to demonstrate that by incorporating model dependencies we gain results that reflect the intended structure significantly better than when incorporating call dependencies alone.</p>
 
 <h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
+<a name="installing" class="anchor" href="#installing"><span class="octicon octicon-link"></span></a>Installing</h3>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+<p><em>TCA</em> runs on the Eclipse Modeling Tools. The following steps assume a fresh installation of Eclipse. </p>
+
+<ul>
+<li>Download Eclipse <a href="http://www.eclipse.org/downloads/packages/eclipse-modeling-tools/keplersr1">Modeling Tools 4.3 (Kepler)</a> (Kepler) and launch it;</li>
+<li>Install through menu <strong>Help &gt; Install Modeling Components...</strong> <a href="http://www.eclipse.org/modeling/tmf/downloads/?project=xtext">Eclipse Xtext 2.5+</a> of the Model Development Tools (MDT) project; further install <a href="http://www.eclipse.org/mmt/?project=qvto">Eclipse QVTo 3.3.0+</a>  of the Model to Model Transformation (MMT) project</li>
+<li>Download <a href="https://github.com/qvt/tca/zipball/master">TCA</a> and import contained projects through <strong>File &gt; Import &gt; Existing Projects into Workspace…</strong> into your Eclipse workspace. </li>
+</ul><p>You are ready to use the code-to-model transformations to produce Bunch-compatible module dependence graphs (MDG) from QVT-O and Xtend programs. The extant module configuration is extracted as well from the sources and stored as a SIL definition. To do so, configure the respective MWE2 file to refer to the transformation code and the models involved. Additionally, setup the weight configuration (Constants.xtend). Use the run configuration <strong>Generate QVTo Dependency Graph</strong>, or <strong>Generate Xtend Dependency Graph</strong>. Resulting MDG and SIL file are placed into <a href="http://github.com/qvt/tca/tree/master/edu.kit.ipd.sdq.mdsd.qvto2mdg/src-gen">src-gen</a> or <a href="http://github.com/qvt/tca/tree/master/edu.kit.ipd.sdq.mdsd.xtend2mdg/src-gen">src-gen</a>. </p>
+
+<p>The MDG file can serve as input to the Bunch tool built at Drexel University, and the output can be compared with the preexisting partition stored in the SIL file using Bunch's built-in metrics.</p>
+
+<h3>
+<a name="see-also" class="anchor" href="#see-also"><span class="octicon octicon-link"></span></a>See Also</h3>
+
+<ul>
+<li>
+<a href="https://sdqweb.ipd.kit.edu/wiki/Modular_Model_Transformations">Modular Model Transformations</a>, the overall approach behind this project, as well as information for developers.</li>
+<li>
+<a href="http://qvt.github.io/xtend2m/">Xtend2m</a>, a modular extension for Xtend2 (hosted at Github).</li>
+<li>
+<a href="http://qvt.github.io/qvtom/">QVTom</a>, a modular extension of QVTo (hosted at Github).</li>
+</ul><h3>
+<a name="contributors" class="anchor" href="#contributors"><span class="octicon octicon-link"></span></a>Contributors</h3>
+
+<ul>
+<li>
+<a href="http://sdq.ipd.kit.edu/people/andreas_rentschler/">Andreas Rentschler</a> from Karlsruhe Institute of Technology</li>
+<li>Dominik Werle from Karlsruhe Institute of Technology</li>
+<li>Joakim von Kistowski from Karlsruhe Institute of Technology</li>
+<li>Michael Junker from Karlsruhe Institute of Technology</li>
+</ul><p>Work has partly been funded by the German Research Foundation (DFG) under under the Priority Programme SPP\,1593: <a href="http://www.dfg-spp1593.de">Design For Future -- Managed Software Evolution</a>.</p>
+
+<p><img src="http://qvt.github.io/qvtr2coq/images/Logo_KIT.png" alt="KIT" height="70px">    
+<img src="http://qvt.github.io/qvtr2coq/images/Logo_PPADVERT.png" alt="ADVERT" height="70px"></p>
       </section>
     </div>
 
