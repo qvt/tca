@@ -21,7 +21,12 @@ You are ready to use the code-to-model transformations to produce Bunch-compatib
 The MDG file can serve as input to the Bunch tool built at Drexel University, and the output can be compared with the preexisting partition stored in the SIL file using Bunch's built-in metrics.
 
 ### Case Studies
-We already used the approach to extract dependence information from two larger transformations from the [Palladio](http://www.palladio-simulator.com) project, PCMEvents2PCM implemented in QVT-O and PCM2SimuCom implemented in Xtend. Results of these studies are stored in a separate Eclipse project, [edu.kit.ipd.sdq.mdsd.bunch-casestudy](https://github.com/qvt/tca/tree/master/edu.kit.ipd.sdq.mdsd.bunch-casestudy).
+We already used the approach to extract dependence information from two larger transformations from the [Palladio](http://www.palladio-simulator.com) project, 
+
+* [PCMEvents2PCM](https://svnserver.informatik.kit.edu/i43/svn/code/Palladio/Core/trunk/MetaModels/de.uka.ipd.sdq.pcm.resources/transformations/events/) (revision 16944) implemented in QVT-O, and
+* [PCM2SimuCom](https://svnserver.informatik.kit.edu/i43/svn/code/Palladio/Core/branches/SimuComXtendTransformation/) (revision 19044) implemented in Xtend.
+
+Results of these studies are stored in a separate Eclipse project, [edu.kit.ipd.sdq.mdsd.bunch-casestudy](https://github.com/qvt/tca/tree/master/edu.kit.ipd.sdq.mdsd.bunch-casestudy).
 
 ### See Also
 * [Modular Model Transformations](https://sdqweb.ipd.kit.edu/wiki/Modular_Model_Transformations), the overall approach behind this project, as well as information for developers.
@@ -33,9 +38,9 @@ We already used the approach to extract dependence information from two larger t
 
 ### Contributors
 * [Andreas Rentschler] (http://sdq.ipd.kit.edu/people/andreas_rentschler/) from Karlsruhe Institute of Technology
-* [Dominik Werle](emailto:dominik.werle_AtSignGoesHere_student.kit.edu) from Karlsruhe Institute of Technology
-* [Joakim von Kistowski](emailto:joakim.vonkistowski_AtSignGoesHere_student.kit.edu) from Karlsruhe Institute of Technology
-* [Michael Junker](emailto:michael.junker_AtSignGoesHere_student.kit.edu) from Karlsruhe Institute of Technology
+* [Dominik Werle](emailto:dominik.werle_AtSignGoesHere_student.kit.edu) from Karlsruhe Institute of Technology, Germany
+* [Joakim von Kistowski](http://se.informatik.uni-wuerzburg.de/staff/v_kistowski_joakim/) from University of Würzburg, Germany
+* [Michael Junker](emailto:michael.junker_AtSignGoesHere_student.kit.edu) from Karlsruhe Institute of Technology, Germany
 
 Work has partly been funded by the German Research Foundation (DFG) under under the Priority Programme SPP\,1593: [Design For Future -- Managed Software Evolution](http://www.dfg-spp1593.de).
 
